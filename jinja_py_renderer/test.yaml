@@ -1,0 +1,11 @@
+{% set appbinary = salt['grains.filter_by']({
+'RedHat': {
+'version': 'app-6.5.2-1.exe'
+},
+'Debian': {
+'version': 'app-6.5.2-2.exe'
+},
+},
+grain='os_family'
+) %}
+
